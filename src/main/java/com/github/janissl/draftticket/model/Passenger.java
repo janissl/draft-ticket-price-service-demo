@@ -8,7 +8,11 @@ public class Passenger {
     public Passenger() {
         super();
     }
-    public Passenger(PassengerType passengerType, String destination) { this(passengerType, destination, 0); }
+
+    public Passenger(PassengerType passengerType, String destination) {
+        this(passengerType, destination, 0);
+    }
+
     public Passenger(PassengerType passengerType, String destination, Integer itemsOfLuggage) {
         this.passengerType = passengerType;
         this.itemsOfLuggage = itemsOfLuggage;

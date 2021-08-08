@@ -25,7 +25,7 @@ public class ExternalWebApiService {
 
     public Double getBasePrice(String destination) throws ExternalServiceUnavailableException {
         try {
-            return restTemplate.getForObject(basePriceUrl + destination, Double.class);
+            return restTemplate.getForObject(basePriceUrl + "/" + destination, Double.class);
         } catch (ResourceAccessException e) {
             throw new ExternalServiceUnavailableException(String.format(
                     "Failed to get a base price for the '%s' destination. Reason: %s", destination, e.getMessage()));

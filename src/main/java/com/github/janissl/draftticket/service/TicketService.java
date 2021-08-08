@@ -47,7 +47,7 @@ public class TicketService {
     }
 
     public Double getBasePriceForDestination(String destination, Map<String, Double> basePriceCache)
-            throws ExternalServiceUnavailableException {
+            throws ExternalServiceUnavailableException, InvalidUserInputException {
 
         Double basePrice;
 
@@ -78,7 +78,7 @@ public class TicketService {
     }
 
     protected List<Ticket> generateTicketsForAllPassengers(List<Passenger> passengers)
-            throws ExternalServiceUnavailableException {
+            throws ExternalServiceUnavailableException, InvalidUserInputException {
 
         List<Ticket> tickets = new ArrayList<>();
         Map<String, Double> basePriceCache = new HashMap<>();

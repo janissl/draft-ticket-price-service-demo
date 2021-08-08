@@ -108,7 +108,7 @@ class TicketServiceTest {
 
     @Test
     @DisplayName("A negative base price for an unsupported destination must throw DataUnavailableException")
-    void testUnsupportedDestination() throws ExternalServiceUnavailableException {
+    void testUnsupportedDestination() throws ExternalServiceUnavailableException, InvalidUserInputException {
         destination = "MiddleOfNowhere";
         double basePrice = -1.0;
         passengerList.add(new Passenger(PassengerType.ADULT, destination, 2));
@@ -143,7 +143,8 @@ class TicketServiceTest {
 
     @Test
     @DisplayName("Tickets for all passengers must be generated correctly")
-    void testGenerationOfTicketsForAllPassengers() throws ExternalServiceUnavailableException {
+    void testGenerationOfTicketsForAllPassengers()
+            throws ExternalServiceUnavailableException, InvalidUserInputException {
         PassengerType passengerType1 = PassengerType.ADULT;
         PassengerType passengerType2 = PassengerType.CHILD;
 

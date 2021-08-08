@@ -47,7 +47,7 @@ Usage
     java -jar draft-ticket-price-service-x.y.z[-SNAPSHOT].jar
    ```
   
-1. Input data are received from a web client by a GET request with `http://localhost:9090/getDraftPrice` as a URL and
+1. Input data are received from a web client by a GET request with `http://localhost:9090/draftprice` as a URL and
    a list of JSON objects in the Message Body.
     
    An example in Python:
@@ -60,7 +60,7 @@ Usage
         
         
         def main():
-            url = 'http://localhost:9090/getDraftPrice'
+            url = 'http://localhost:9090/draftprice'
             data =
             [
                 {'passengerType': 'ADULT', 'destination': 'Vilnius', 'itemsOfLuggage': 2},

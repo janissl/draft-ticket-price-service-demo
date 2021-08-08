@@ -21,7 +21,7 @@ class DraftTicketController {
         this.priceService = priceService;
     }
 
-    @GetMapping(path="/getDraftPrice", consumes="application/json")
+    @GetMapping(path="/draftprice", consumes="application/json")
     public DraftPrice getDraftTicket(@RequestBody List<Passenger> passengerList)
             throws InvalidUserInputException, ExternalServiceUnavailableException {
         return priceService.getDraftPrice(passengerList);
